@@ -23,7 +23,8 @@
 int main()
 {
    int option = 0;
-
+   int flagFirstTxt = 0;
+   int flagFirstBin = 0;
    LinkedList* listaEmpleados = ll_newLinkedList();
 
 
@@ -44,9 +45,11 @@ int main()
 		{
 		case 1:
 			controller_loadFromText("data.csv",listaEmpleados);
+			flagFirstTxt = 1;
 			break;
 		case 2:
 			controller_loadFromBinary("data.bin",listaEmpleados);
+			flagFirstBin = 1;
 			break;
 		case 3:
 			controller_addEmployee(listaEmpleados);
@@ -64,10 +67,24 @@ int main()
 			controller_sortEmployee(listaEmpleados);
 			break;
 		case 8:
-			controller_saveAsText("data.csv",listaEmpleados);
+			if(flagFirstTxt == 1)
+			{
+				controller_saveAsText("data.csv",listaEmpleados);
+			}
+			else
+			{
+				printf("No se cargo la lista.\n");
+			}
 			break;
 		case 9:
-			controller_saveAsBinary("data.bin",listaEmpleados);
+			if(flagFirstBin == 1)
+			{
+				controller_saveAsBinary("data.bin",listaEmpleados);
+			}
+			else
+			{
+				printf("No se cargo la lista.\n");
+			}
 			break;
 		case 10:
 			ll_deleteLinkedList(listaEmpleados);

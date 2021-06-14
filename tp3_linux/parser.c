@@ -36,6 +36,10 @@ int parser_EmployeeFromText(FILE* pFile , LinkedList* pArrayListEmployee)
 							ll_add(pArrayListEmployee, auxEmpleado);
 							contador ++;
 						}
+						else
+						{
+							continue;
+						}
 					}
 					flagFirst = 1;
 				}

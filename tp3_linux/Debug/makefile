@@ -39,7 +39,7 @@ all: TP3
 TP3: $(OBJS) $(USER_OBJS) makefile objects.mk $(OPTIONAL_TOOL_DEPS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC C Linker'
-	gcc  -o "TP3" $(OBJS) $(USER_OBJS) $(LIBS) /home/facu/tp3_linux/LinkedList.a
+	gcc  -o "TP3" $(OBJS) $(USER_OBJS) $(LIBS) /home/facu/Repositorios/TP 2/tp_laboratorio_2/tp3_linux/LinkedList.a
 	@echo 'Finished building target: $@'
 	@echo ' '
 

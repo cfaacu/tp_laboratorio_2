@@ -242,7 +242,7 @@ int isName(char* nombre)
 	{
 		while(nombre[i] != '\0')
 		{
-			if((nombre[i] >= 'A' && nombre[i] <= 'Z') || (nombre[i] >= 'a' && nombre[i] <= 'z') || nombre[i] == '-' || nombre[i] == ' ')
+			if((nombre[i] >= 'A' && nombre[i] <= 'Z') || (nombre[i] >= 'a' && nombre[i] <= 'z') || nombre[i] == ' ')
 			{
 				nombre[0]=toupper(nombre[0]);
 				retorno = 0;
